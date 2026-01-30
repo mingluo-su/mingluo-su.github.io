@@ -4,11 +4,11 @@ layout: homepage
 
 ## About Me
 
-Hi! I am a visiting student in [ENCODE Lab](https://westlake-encode-lab.github.io/) at Westlake University, under the supervision of [Prof. Huan Wang](https://www.huanwang.tech/). I obtained my M.Eng. in Communication Engineering from Beihang University in 2025 and B.Eng. in Communication Engineering at Northwestern Polytechnical University in 2022.
+Hi! I am an incoming 26 fall PhD student in [ENCODE Lab](https://westlake-encode-lab.github.io/) at Westlake University, under the supervision of [Prof. Huan Wang](https://www.huanwang.tech/). I obtained my M.Eng. in Communication Engineering from Beihang University in 2025 and B.Eng. in Communication Engineering at Northwestern Polytechnical University in 2022.
 
 ## Research Interests
 
-- **Model Pruning:** unstructured/semi-structured pruning, train-free pruning
+- **Model Pruning:** unstructured/semi-structured pruning, training-free pruning
 - **Model Quantization:** post-training quantization, low-bit quantization
 
 ## News
