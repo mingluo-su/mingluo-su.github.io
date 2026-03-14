@@ -1,4 +1,4 @@
-<!-- {% assign news_list = site.news | sort: "date" | reverse | slice: 0, include.limit -%}
+{% assign news_list = site.news | sort: "date" | reverse | slice: 0, include.limit -%}
 
 <div class="my-3 bg-white shadow-sm rounded-sm">
     <h6 class="p-3 mb-0 border-bottom border-gray" style="font-size: 1.1rem; font-weight: 500;">
@@ -8,7 +8,7 @@
         {% for item in news_list %}
         <div class="media py-2">
             <div class="media-body">
-                <div class="my-1 d-flex" style="font-size: 1.1rem; line-height: 1.7;">
+                <div class="my-1 d-flex" style="font-size: 1.1rem">
                     <div class="font-weight-bold no-break mr-3" style="color: #6c757d;">
                         {{ item.date | date: "%b %Y" }}
                     </div>
@@ -18,14 +18,14 @@
         </div>
         {% endfor %}
     </div>
-</div> -->
+</div>
 
-{% assign news_by_year = site.news | sort: "date" | reverse | slice: 0, include.limit | group_by_exp: "item", "item.date | date: '%Y'" -%}
+<!-- {% assign news_by_year = site.news | sort: "date" | reverse | slice: 0, include.limit | group_by_exp: "item", "item.date | date: '%Y'" -%}
 
 <div class="my-3 bg-white shadow-sm rounded-sm">
     <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-rss" style="color: #e23e3e;"></i> News</h6>
     <div class="px-3 pb-1">
-        <!-- {% for year in news_by_year %}
+        {% for year in news_by_year %}
         <div class="media py-1 {% if not_first -%}border-top border-gray{%- endif %}">
             {% assign not_first = true %}
             <div class="mr-3 text-muted my-1">{{ year.name }}</div>
@@ -38,16 +38,6 @@
                 {% endfor %}
             </div>
         </div>
-        {% endfor %} -->
-        <div class="media py-2">
-            <div class="media-body">
-                <div class="my-1 d-flex">
-                    <div class="font-weight-bold no-break mr-3" style="color: #6c757d;">
-                        {{ item.date | date: "%b %Y" }}
-                    </div>
-                    <div style="color: #212529;">{{ item.title }}</div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-</div>
+</div> -->
