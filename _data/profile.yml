@@ -5,7 +5,7 @@ position_name: "Incoming PhD Student @ Westlake University"    # 第一行：职
 
 positions:
 - logo: /assets/images/badges/Texas_A&M_University_seal.svg  # Logo is optional
-  name: Ph.D. in Geographic Information Systems
+  name: Incoming PhD Student @ Westlake University
 # - name: Position 2 without logo
 
 
@@ -19,8 +19,10 @@ short_bio: >
 
   <p>
      Hi! I'm an incoming 26 fall PhD student in <a href="https://westlake-encode-lab.github.io/">ENCODE Lab</a> at Westlake University, under the supervision of <a href="https://www.huanwang.tech/">Prof. Huan Wang</a>. I obtained my M.Eng. in Communication Engineering from Beihang University in 2025 and B.Eng. in Communication Engineering at Northwestern Polytechnical University in 2022.
-
-    Currently, my research centers on Efficient AI and Large Language Models, including model pruning and post-training quantization.
+  <p>
+  
+  <p>
+    Currently, my research centers on model compression, including model pruning and post-training quantization.
   </p>
 
 
