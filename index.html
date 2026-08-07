@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mingluo Su — Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Mingluo Su">
+  <meta name="description"
+    content="Mingluo Su — incoming PhD student at Westlake University, working on model compression, pruning, and post-training quantization.">
+  <meta name="keywords"
+    content="Mingluo Su, model compression, pruning, quantization, Westlake University, ENCODE Lab">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --accent: #205a93;
+      --accent-hover: #244b73;
+      --accent-soft: rgba(47, 95, 143, 0.10);
+    }
+
+    .social li:nth-child(1) i,
+    .social li:nth-child(2) i,
+    .social li:nth-child(3) i,
+    .social li:nth-child(4) i {
+      color: var(--accent);
+    }
+
+    .about-text h1 { margin-bottom: 6px; }
+
+    .about-text .role {
+      margin-bottom: 25px; 
+      font-size: 15.5px;
+      color: var(--accent);
+    }
+
+    .social {
+      gap: 8px;
+      margin: 0 0 24px;
+    }
+
+    .social a {
+      gap: 7px;
+      padding: 2px 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      font-size: 15.5px;
+      color: var(--accent);
+    }
+
+    .social a i { font-size: 15px; }
+
+    .social a:hover {
+      border-color: transparent;
+      background: transparent;
+      transform: none;
+    }
+
+    @media (min-width: 721px) {
+      .about-photo {
+        margin-top: 58px;
+        margin-left: 24px;
+      }
+    }
+
+    .section-icon {
+      margin-left: 7px;
+      font-size: 0.78em;
+      vertical-align: 0.04em;
+    }
+
+    .news-icon { color: #f97316; }
+    .publications-icon { color: #2563eb; }
+
+    .news-scroll {
+      max-height: 180px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: 0 8px 0 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: var(--text-4) transparent;
+    }
+
+    .news-scroll:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .news-scroll::-webkit-scrollbar { width: 8px; }
+    .news-scroll::-webkit-scrollbar-track { background: transparent; }
+    .news-scroll::-webkit-scrollbar-thumb {
+      background: var(--text-4);
+      border-radius: 999px;
+    }
+
+    .news-list li.news-extra { display: grid; }
+    .news-list li {
+      grid-template-columns: 60px 1fr;
+      gap: 10px;
+      padding: 4px 0;
+    }
+    .news-list p {
+      font-size: 16.5px;
+      line-height: 1.55;
+    }
+
+    .pub {
+      grid-template-columns: 210px 1fr;
+    }
+
+    .pub-figure {
+      width: 210px;
+      height: 118px;
+      line-height: 0;
+    }
+
+    .pub-figure img {
+      height: 100%;
+      object-fit: fill;
+      padding: 0;
+    }
+
+    .pub-body {
+      gap: 0;
+      padding-top: 0;
+    }
+
+    .pub-title,
+    .pub-authors,
+    .pub-links,
+    .pub-venue {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .pub-title {
+      font-size: 16.5px;
+      font-weight: 700;
+    }
+
+    .pub-title a {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .pub-title a strong {
+      color: inherit;
+      font-weight: 700;
+    }
+
+    .pub-title a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .pub-authors {
+      font-size: 15px;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 2px;
+      font-size: 13.5px;
+    }
+
+    .pub-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 1px 6px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--bg-soft);
+      line-height: 1.45;
+    }
+
+    .pub-links a:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    .pub-links i { font-size: 11px; }
+
+    @media (max-width: 720px) {
+      .news-scroll {
+        max-height: 250px;
+        padding: 0 8px 0 0;
+      }
+
+      .news-list li {
+        grid-template-columns: 60px 1fr;
+        gap: 7px;
+        padding: 0;
+        border-bottom: 0;
+      }
+
+      .pub { grid-template-columns: 1fr; }
+
+      .pub-figure {
+        width: 100%;
+        max-width: 360px;
+        height: 190px;
+      }
+    }
+  </style>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+</head>
+
+<body>
+  <main id="top">
+    <section id="about" class="about">
+      <div class="about-text">
+        <h1><strong>Mingluo Su</strong></h1>
+        <p class="role">Incoming PhD Student · Westlake University</p>
+
+        <p>
+          I am an incoming PhD student in <a href="https://westlake-encode-lab.github.io/">ENCODE Lab</a> at Westlake University,
+          advised by <a href="https://www.huanwang.tech/">Prof. Huan Wang</a>.
+          I received my M.Eng. in Communication Engineering from Beihang University in 2025 and my B.Eng. from Northwestern Polytechnical University in 2022.
+        </p>
+
+        <p>
+          My research focuses on model compression, especially model pruning and post-training quantization for modern large-scale models.
+        </p>
+
+        <ul class="social" aria-label="Links">
+          <li><a href="mailto:sumingluo@westlake.edu.cn" title="Email"><i class="fas fa-envelope"></i><span>Email</span></a></li>
+          <li><a href="https://scholar.google.com/citations?user=OEGnyD8AAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i><span>Scholar</span></a></li>
+          <li><a href="https://github.com/mingluo-su" title="GitHub"><i class="fab fa-github"></i><span>GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/in/mingluo-su-990716390" title="LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a></li>
+        </ul>
+      </div>
+
+      <div class="about-photo">
+        <img src="images/photos/profile.jpg" alt="Portrait of Mingluo Su">
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <h2><strong>News</strong> <i class="fas fa-fire section-icon news-icon" aria-hidden="true"></i></h2>
+      <div class="news-scroll" tabindex="0" aria-label="News items; scroll to see earlier news">
+        <ul class="news-list">
+          <li><time>2026.01</time><p>Our paper on LLM unstructured pruning has been accepted to <strong>CPAL 2026</strong> (oral).</p></li>
+          <li><time>2026.01</time><p>Our diffusion-model pruning work has been accepted to <strong>ICLR 2026</strong>.</p></li>
+          <li><time>2025.09</time><p>Completed my M.Eng. at Beihang University and started preparing for the PhD journey.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <h2><strong>Selected Publications</strong> <i class="fas fa-book-open section-icon publications-icon" aria-hidden="true"></i></h2>
+
+      <ul class="pubs">
+        <li class="pub">
+          <a class="pub-figure" href="images/papers/2026cpal.png" data-lightbox>
+            <img src="images/papers/2026cpal.png" alt="ROSE teaser figure">
+          </a>
+          <div class="pub-body">
+            <p class="pub-title"><a href="https://openreview.net/forum?id=x43pVuRwGM#discussion"><strong>ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning</strong></a></p>
+            <p class="pub-authors">
+              <strong>Mingluo Su</strong>, Huan Wang
+            </p>
+            <p class="pub-venue">
+              <span class="venue">CPAL 2026</span> · Oral
+            </p>
+            <p class="pub-links">
+              <a href="https://openreview.net/forum?id=x43pVuRwGM#discussion"><i class="far fa-file-pdf" aria-hidden="true"></i>Paper</a>
+              <a href="https://github.com/mingluo-su/ROSE"><i class="fab fa-github" aria-hidden="true"></i>Code</a>
+              <a href="https://mingluo-su.github.io/ROSE-Webpage/"><i class="fas fa-globe" aria-hidden="true"></i>Webpage</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub">
+          <a class="pub-figure" href="images/papers/2026obsdiff.png" data-lightbox>
+            <img src="images/papers/2026obsdiff.png" alt="OBS-Diff teaser figure">
+          </a>
+          <div class="pub-body">
+            <p class="pub-title"><a href="https://arxiv.org/pdf/2510.06751"><strong>OBS-Diff: Accurate Pruning For Diffusion Models in One-Shot</strong></a></p>
+            <p class="pub-authors">
+              Junhan Zhu, Hesong Wang, <strong>Mingluo Su</strong>, Zefang Wang, Huan Wang
+            </p>
+            <p class="pub-venue">
+              <span class="venue">ICLR 2026</span>
+            </p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/pdf/2510.06751"><i class="far fa-file-pdf" aria-hidden="true"></i>Paper</a>
+              <a href="https://github.com/Alrightlone/OBS-Diff"><i class="fab fa-github" aria-hidden="true"></i>Code</a>
+              <a href="https://alrightlone.github.io/OBS-Diff-Webpage/"><i class="fas fa-globe" aria-hidden="true"></i>Webpage</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Mingluo Su · Last updated <span id="updated"></span></p>
+  </footer>
+
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Paper figure" hidden>
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-frame">
+      <button id="lightbox-close" aria-label="Close"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    const now = new Date();
+    document.getElementById('year').textContent = now.getFullYear();
+    document.getElementById('updated').textContent =
+      now.toLocaleString('en-US', { year: 'numeric', month: 'short' });
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbClose = document.getElementById('lightbox-close');
+    function openLightbox(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lb.hidden = false;
+      requestAnimationFrame(() => lb.classList.add('open'));
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lb.classList.remove('open');
+      setTimeout(() => { lb.hidden = true; lbImg.src = ''; }, 220);
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('[data-lightbox]').forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        const img = el.querySelector('img');
+        openLightbox(el.getAttribute('href'), img ? img.alt : '');
+      });
+    });
+    lbClose.addEventListener('click', closeLightbox);
+    lb.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !lb.hidden) closeLightbox();
+    });
+  </script>
+</body>
+
+</html>
