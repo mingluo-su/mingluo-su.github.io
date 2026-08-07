@@ -445,7 +445,7 @@ main {
 .pub-title {
   margin: 0;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.38;
   letter-spacing: 0;
   color: var(--text);
@@ -454,7 +454,7 @@ main {
 
 .pub-title a strong {
   color: inherit;
-  font-weight: 700;
+  font-weight: inherit;
 }
 
 .pub-authors {
