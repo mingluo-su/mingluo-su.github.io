@@ -20,9 +20,9 @@
   --border:        rgba(0, 0, 0, 0.08);
   --border-strong: rgba(0, 0, 0, 0.14);
 
-  --accent:        #2563eb;
-  --accent-hover:  #1d4ed8;
-  --accent-soft:   rgba(37, 99, 235, 0.10);
+  --accent:        #3b7fbd;
+  --accent-hover:  #2b6fa8;
+  --accent-soft:   rgba(59, 127, 189, 0.10);
 
   --highlight-bg: #fef3c7;
   --highlight-fg: #92400e;
@@ -85,7 +85,7 @@ body {
                "Iowan Old Style", "Sitka Text", Cambria, Georgia,
                "Songti SC", "Noto Serif CJK SC", "PingFang SC", serif;
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.5;
   letter-spacing: 0;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
@@ -93,7 +93,7 @@ body {
   transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
 }
 
-p { margin: 0 0 12px; }
+p { margin: 0 0 10px; }
 strong { font-weight: 700; color: var(--text); }
 
 a {
@@ -218,14 +218,14 @@ main {
 
 .about-text .role {
   margin: 0 0 18px;
-  color: var(--text-3);
+  color: #6f747c;
   font-size: 15px;
 }
 
 .about-text p {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   font-size: 16.5px;
-  line-height: 1.7;
+  line-height: 1.62;
   color: var(--text);
 }
 
@@ -308,7 +308,11 @@ main {
 
 .section p {
   font-size: 16.5px;
-  line-height: 1.7;
+  line-height: 1.62;
+}
+
+#publications {
+  padding-top: 34px;
 }
 
 /* ─────────── Research interests ─────────── */
@@ -322,7 +326,7 @@ main {
   padding: 4px 0 4px 22px;
   font-size: 15.5px;
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.58;
 }
 .interests li::before {
   content: '▸';
@@ -343,7 +347,7 @@ main {
   display: grid;
   grid-template-columns: 84px 1fr;
   gap: 14px;
-  padding: 8px 0;
+  padding: 3px 0;
   font-size: 15px;
   align-items: baseline;
 }
@@ -364,7 +368,7 @@ main {
 .news-list p {
   margin: 0;
   font-size: 16.5px;
-  line-height: 1.7;
+  line-height: 1.62;
   color: var(--text);
 }
 .news-list em {
@@ -402,7 +406,7 @@ main {
   display: grid;
   grid-template-columns: 168px 1fr;
   gap: 20px;
-  padding: 14px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
   transition: background-color 0.2s var(--ease);
@@ -434,7 +438,7 @@ main {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1.5px;
   padding-top: 2px;
 }
 
@@ -442,7 +446,7 @@ main {
   margin: 0;
   font-size: 17px;
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.38;
   letter-spacing: 0;
   color: var(--text);
   transition: color 0.2s var(--ease);
@@ -456,7 +460,7 @@ main {
 .pub-authors {
   margin: 2px 0 0;
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.48;
   color: var(--text-2);
 }
 .pub-authors strong { color: var(--text); font-weight: 600; }
@@ -473,23 +477,27 @@ main {
 
 .pub-links {
   margin: 2px 0 0;
-  font-size: 13.5px;
-  line-height: 1.5;
-  color: var(--text-4);
+  font-size: 15px;
+  line-height: 1.48;
+  color: var(--text-3);
 }
 .pub-links a {
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 400;
 }
 .pub-links a:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+.pub-links .link-separator {
+  color: var(--text-4);
+  margin: 0 0.45em;
+}
 
 .pub-venue {
   margin: 2px 0 0;
   font-size: 14.5px;
-  line-height: 1.55;
+  line-height: 1.48;
 }
 
 .venue {

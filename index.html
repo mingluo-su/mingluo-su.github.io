@@ -18,29 +18,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root {
-      --accent: #205a93;
-      --accent-hover: #244b73;
-      --accent-soft: rgba(47, 95, 143, 0.10);
+      --accent: #3b7fbd;
+      --accent-hover: #2b6fa8;
+      --accent-soft: rgba(59, 127, 189, 0.10);
     }
 
-    .social li:nth-child(1) i,
-    .social li:nth-child(2) i,
-    .social li:nth-child(3) i,
-    .social li:nth-child(4) i {
-      color: var(--accent);
-    }
+    .social li:nth-child(1) i { color: #ea4335; }
+    .social li:nth-child(2) i { color: #4285f4; }
+    .social li:nth-child(3) i { color: #24292f; }
+    .social li:nth-child(4) i { color: #0a66c2; }
 
     .about-text h1 { margin-bottom: 6px; }
 
     .about-text .role {
       margin-bottom: 25px; 
       font-size: 15.5px;
-      color: var(--accent);
+      color: #6f747c;
     }
 
     .social {
-      gap: 8px;
-      margin: 0 0 24px;
+      gap: 16px;
+      margin: 18px 0 18px;
     }
 
     .social a {
@@ -50,12 +48,12 @@
       border-radius: 0;
       background: transparent;
       font-size: 15.5px;
-      color: var(--accent);
     }
 
     .social a i { font-size: 15px; }
 
     .social a:hover {
+      color: var(--text-2);
       border-color: transparent;
       background: transparent;
       transform: none;
@@ -67,15 +65,6 @@
         margin-left: 24px;
       }
     }
-
-    .section-icon {
-      margin-left: 7px;
-      font-size: 0.78em;
-      vertical-align: 0.04em;
-    }
-
-    .news-icon { color: #f97316; }
-    .publications-icon { color: #2563eb; }
 
     .news-scroll {
       max-height: 180px;
@@ -111,7 +100,7 @@
     }
     .news-list p {
       font-size: 16.5px;
-      line-height: 1.55;
+      line-height: 1.5;
     }
 
     .pub {
@@ -140,7 +129,7 @@
     .pub-links,
     .pub-venue {
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.44;
     }
 
     .pub-title {
@@ -169,31 +158,27 @@
     }
 
     .pub-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
       margin-top: 2px;
-      font-size: 13.5px;
+      font-size: 15px;
+      color: var(--text-3);
     }
 
     .pub-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 1px 6px;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      background: var(--bg-soft);
-      line-height: 1.45;
+      color: var(--accent);
+      font-weight: 400;
+      line-height: inherit;
     }
 
     .pub-links a:hover {
-      border-color: var(--accent);
-      background: var(--accent-soft);
-      text-decoration: none;
+      color: var(--accent-hover);
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
-    .pub-links i { font-size: 11px; }
+    .pub-links .link-separator {
+      color: var(--text-4);
+      margin: 0 0.45em;
+    }
 
     @media (max-width: 720px) {
       .news-scroll {
@@ -217,8 +202,7 @@
       }
     }
   </style>
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="icon" type="image/jpeg" href="images/photos/photo.jpg">
 
 </head>
 
@@ -227,16 +211,16 @@
     <section id="about" class="about">
       <div class="about-text">
         <h1><strong>Mingluo Su</strong></h1>
-        <p class="role">Incoming PhD Student · Westlake University</p>
+        <p class="role">PhD Student@Westlake University</p>
 
         <p>
-          I am an incoming PhD student in <a href="https://westlake-encode-lab.github.io/">ENCODE Lab</a> at Westlake University,
+          I am a PhD student in <a href="https://westlake-encode-lab.github.io/">ENCODE Lab</a> at Westlake University,
           advised by <a href="https://www.huanwang.tech/">Prof. Huan Wang</a>.
-          I received my M.Eng. in Communication Engineering from Beihang University in 2025 and my B.Eng. from Northwestern Polytechnical University in 2022.
+          I received M.Eng. in Communication Engineering from Beihang University in 2025 and B.Eng. from Northwestern Polytechnical University in 2022.
         </p>
 
         <p>
-          My research focuses on model compression, especially model pruning and post-training quantization for modern large-scale models.
+          My research focuses on model compression, especially post-training pruning and quantization for LLMs.
         </p>
 
         <ul class="social" aria-label="Links">
@@ -253,18 +237,17 @@
     </section>
 
     <section id="news" class="section">
-      <h2><strong>News</strong> <i class="fas fa-fire section-icon news-icon" aria-hidden="true"></i></h2>
+      <h2><strong>News</strong></h2>
       <div class="news-scroll" tabindex="0" aria-label="News items; scroll to see earlier news">
         <ul class="news-list">
           <li><time>2026.01</time><p>Our paper on LLM unstructured pruning has been accepted to <strong>CPAL 2026</strong> (oral).</p></li>
           <li><time>2026.01</time><p>Our diffusion-model pruning work has been accepted to <strong>ICLR 2026</strong>.</p></li>
-          <li><time>2025.09</time><p>Completed my M.Eng. at Beihang University and started preparing for the PhD journey.</p></li>
         </ul>
       </div>
     </section>
 
     <section id="publications" class="section">
-      <h2><strong>Selected Publications</strong> <i class="fas fa-book-open section-icon publications-icon" aria-hidden="true"></i></h2>
+      <h2><strong>Publications</strong></h2>
 
       <ul class="pubs">
         <li class="pub">
@@ -277,12 +260,14 @@
               <strong>Mingluo Su</strong>, Huan Wang
             </p>
             <p class="pub-venue">
-              <span class="venue">CPAL 2026</span> · Oral
+              <span class="venue">CPAL 2026</span> (oral)
             </p>
             <p class="pub-links">
-              <a href="https://openreview.net/forum?id=x43pVuRwGM#discussion"><i class="far fa-file-pdf" aria-hidden="true"></i>Paper</a>
-              <a href="https://github.com/mingluo-su/ROSE"><i class="fab fa-github" aria-hidden="true"></i>Code</a>
-              <a href="https://mingluo-su.github.io/ROSE-Webpage/"><i class="fas fa-globe" aria-hidden="true"></i>Webpage</a>
+              <a href="https://openreview.net/forum?id=x43pVuRwGM#discussion">Paper</a>
+              <span class="link-separator">/</span>
+              <a href="https://github.com/mingluo-su/ROSE">Code</a>
+              <span class="link-separator">/</span>
+              <a href="https://mingluo-su.github.io/ROSE-Webpage/">Project</a>
             </p>
           </div>
         </li>
@@ -300,9 +285,11 @@
               <span class="venue">ICLR 2026</span>
             </p>
             <p class="pub-links">
-              <a href="https://arxiv.org/pdf/2510.06751"><i class="far fa-file-pdf" aria-hidden="true"></i>Paper</a>
-              <a href="https://github.com/Alrightlone/OBS-Diff"><i class="fab fa-github" aria-hidden="true"></i>Code</a>
-              <a href="https://alrightlone.github.io/OBS-Diff-Webpage/"><i class="fas fa-globe" aria-hidden="true"></i>Webpage</a>
+              <a href="https://arxiv.org/pdf/2510.06751">Paper</a>
+              <span class="link-separator">/</span>
+              <a href="https://github.com/Alrightlone/OBS-Diff">Code</a>
+              <span class="link-separator">/</span>
+              <a href="https://alrightlone.github.io/OBS-Diff-Webpage/">Project</a>
             </p>
           </div>
         </li>
